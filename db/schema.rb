@@ -14,31 +14,25 @@
 ActiveRecord::Schema.define(version: 20190816161411) do
 
   create_table "clients", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "username"
+    t.string "password_digest"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "client_id"
-    t.string   "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "client_id"
+    t.string  "comment"
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer  "client_id"
-    t.string   "bed_size"
-    t.integer  "occupancy"
-    t.date     "date"
-    t.string   "note"
-    t.integer  "number_of_day"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "client_id"
+    t.string  "bed_size"
+    t.integer "occupancy"
+    t.date    "date"
+    t.string  "room"
+    t.integer "number_of_day"
   end
 
 end

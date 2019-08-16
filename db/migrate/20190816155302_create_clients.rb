@@ -8,7 +8,6 @@ class CreateClients < ActiveRecord::Migration
       #security
       t.string :password_digest
     
-      t.timestamps
     end
     
   end
