@@ -1,6 +1,6 @@
 # HT | Your Hotel - Sinatra App
 
-HT is a web application designed to help users or clients to make a complete reservations in order for them to enjoy their vacation. Users will have the ability to create, view, update and delete their runs.
+HT is a web application designed to help users or clients to make a complete reservations in order for them to enjoy their vacation. Users will have the ability to create, view, update and delete their reserbations and their comments about the hotel..
 
 ## Installation & Setup
 
