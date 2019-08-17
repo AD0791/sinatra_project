@@ -4,12 +4,12 @@ class Client < ActiveRecord::Base
     has_many :comments
     validates_presence_of :first_name, :last_name, :email, :username, :password  
     
-    def slug 
+  def slug 
     username.downcase.gsub(" ","-")
   end
 
   def self.find_by_slug(slug)
-    User.all.find{|user| user.slug == slug}
+    Client.all.find{|client| client.slug == slug}
   end
 
 end

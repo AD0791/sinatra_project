@@ -60,9 +60,17 @@ p {
 }
 
 .btn-light {
+    display: inline-block;
+    border-radius: 5px;
     background: #f4f4f4;
     color: #333333;
 }
+
+.btn-light:hover {
+    background: #f7c08a;
+    color: #333333;
+}
+
 
 .bg-dark {
     background: #333333;
@@ -291,4 +299,88 @@ flash {
     color: #33C6B6;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+/**********/
+/* signup */
+#container2 {
+    margin: 30px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.form-wrap {
+    background: #fff;
+    padding: 15px 25px;
+    color: #333;
+}
+
+.form-wrap h1,
+.form-wrap p {
+    text-align: center;
+}
+
+.form-wrap .form-group {
+    margin-top: 15px;
+}
+
+.form-wrap .form-group label {
+    display: block;
+    color: #666;
+}
+
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+
+.form-wrap button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-wrap button:hover {
+    background: #f7c08a
+}
+
+.form-wrap .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.form-condition a {
+    display: inline;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: black;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-condition a:hover {
+    background: #f7c08a;
+}
+
+.sm-footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sm-footer a {
+    color: black;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.sm-footer a:hover {
+    background: #f7c08a;
 }

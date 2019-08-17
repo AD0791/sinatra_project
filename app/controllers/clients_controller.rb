@@ -8,7 +8,21 @@ class ClientsController < ApplicationController
         end
     end
 
-
+    post '/clients/signup' do
+        
+        #binding.pry
+        if Client.exists?(username: params[:username])
+            flash[:message] = "Sorry, that username is not available."
+            erb :'/clients/signup'
+        elsif params[:username] != "" || params[:email] != "" || params[:first_name] != "" || params[:password] != "" || params[:last_name] != ""
+            # no empty fields recorded
+            @client = Client.create(params) 
+            session[:client_id] = @client.id
+            redirect "/clients/#{@client.slug}"
+        else
+            erb :'/clients/signup' 
+        end
+    end
 
 
     
