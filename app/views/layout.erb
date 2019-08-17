@@ -14,18 +14,36 @@
 </head>
 
 <body>
+
+<% if logged_in? %>
   <header>
     <nav id="navbar">
       <div class="container">
         <h1 class="logo"><a href="/">HT</a></h1>
         <ul>
-          <li><a href="/" class="current">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/login">Login</a></li>
+        <!-- class="current"-->
+          <li><a href="/">Home</a></li>
+          <li><a href="/comments/about">About</a></li>
+          <li><a href="/clients/logout">Logout</a></li>
         </ul>
       </div>
     </nav>
   </header>
+<% else %>
+         <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="/">HT</a></h1>
+        <ul>
+        <!-- class="current"-->
+          <li><a href="/">Home</a></li>
+          <li><a href="/comments/about">About</a></li>
+          <li><a href="/clients/login">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header> 
+<% end %>
     <!--The content Area-->
     <%=yield%>
 
@@ -36,8 +54,7 @@
 <div class="clr"></div>
 <footer id="main-footer">
       <p>Hotel HT &copy; 2019, ALL RIGHTS RESERVED </p>
-
-    </footer>
+</footer>
 </body>
 
 </html>

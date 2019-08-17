@@ -1,0 +1,28 @@
+<section id="contact-form" class="py-3">
+        <div class="container">
+            <h1 class="l-heading"><span class='text-primary'>Visit</span> Us</h1>
+            <p>Please fill out the form below to enter your account</p>
+            <form action="/clients/login" method="POST">
+                <fieldset class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </fieldset>
+                <!--Flash message-->
+                <% if flash.has?(:message) %>
+                    <p class="flash"><%= flash[:message] %></p>
+                <% end %>
+                <button type="submit" class="btn">Login</button>
+            </form>
+                <p>If you don't have an account please <a href="/clients/signup" class='btn'>Sign Up.</a>?</p>
+        </div>
+    </section>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>

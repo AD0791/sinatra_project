@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    get '/about' do
+    get '/comments/about' do
         erb :'comments/about'
     end
 end
