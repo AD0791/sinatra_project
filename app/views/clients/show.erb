@@ -26,23 +26,15 @@
     <div class="info-content">
         <h2><span class="text-primary">Your </span> comment matters to us</h2>
         <%@client.comments.all.each do |comments|%>
-            <div class="testimonial bg-primary">
-                <img src="#" alt="<%=comments.client.first_name%>">
-                <p><%=comments.comment%></p>
-            </div>
+        <div class="testimonial bg-primary">
+            <img src="#" alt="<%=comments.client.first_name%>">
+            <p><%=comments.comment%></p>
+        </div>
         <%end%>
         <a href="/comments/new" class="btn btn-light"> Add New Comment</a>
     </div>
 </section>
 
+
+
 <!--set the new, edit and delete button-->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

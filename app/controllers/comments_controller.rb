@@ -17,9 +17,9 @@ class CommentsController < ApplicationController
         @comment = Comment.create(params)
         flash[:message] = "Your comment has been added"
         binding.pry
-        redirect '/clients/#{@comment.client.slug}'
+        redirect "/clients/#{@comment.client.slug}"
         if @comment.client_id != current_user.id
-            redirect '/clients/#{current_user.slug}'
+            redirect "/clients/#{current_user.slug}"
         end
     end
 
