@@ -1,0 +1,10 @@
+ <!--i will not use it-->
+
+<h1> Are you sure, You want to delete your comment?</h1>
+
+<p> <%=@comment.comment%> </p>
+
+<form action="/comments/<%= @comment.id %>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete" id="Submit">
+</form>
