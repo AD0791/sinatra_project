@@ -15,15 +15,16 @@
 <section id="home-info" class="bg-dark">
     <div class="info-content">
         <h2><span class="text-primary">Your </span> Reservation</h2>
-        <%@client.reservations.all.each do |reservation|%>
-            <div class="testimonial bg-primary" style="display: flex; margin-bottom:10px">
-                <p style='margin-right: 70px'>Date: <%=reservation.date%></p>
-                <ol style="text-align: center; padding: 10px 10px">
-                    <li>Room: <%=reservation.room%></li>
-                    <li>Bed Size: <%=reservation.bed_size%></li>
-                    <li>Occupancy: <%=reservation.occupancy%></li>
-                    <li>Duration: <%=reservation.number_of_day%></li>
-                </ol>
+        <%if @client.reservations%>
+            <%@client.reservations.all.each do |reservation|%>
+                <div class="testimonial bg-primary" style="display: flex; margin-bottom:10px; border-radius: 5px">
+                    <p style='margin-right: 70px'>Date: <%=reservation.date%></p>
+                    <ol style="text-align: center; padding: 10px 10px">
+                        <li>Room: <%=reservation.room%></li>
+                        <li>Bed Size: <%=reservation.bed_size%></li>
+                        <li>Occupancy: <%=reservation.occupancy%></li>
+                        <li>Duration: <%=reservation.number_of_day%></li>
+                    </ol>
                 <div style="position:absolute; left:400px; margin-top:10px">
                     <a href="#" class=" btn-fright btn-fright-edit">Edit</a>
                     <!-- <a href="#" class=" btn-float btn-float-delete">delete</a> -->
@@ -34,26 +35,28 @@
                 </div>    
             </div>
         <% end %>
-        <a href="#" class="btn btn-light"> Add New Reservation</a>
+    <% end %>
+        <a href="#" class="btn btn-light"> Add  Reservation</a>
     </div>
-    <div class="info-content">
+    <div class="info-content" >
         <h2><span class="text-primary">Your </span> comment matters to us</h2>
-        <%@client.comments.all.each do |comments|%>
-        <div class="testimonial bg-primary" style="display: flex; margin-bottom:10px">
-            <img src="#" alt="<%=comments.client.first_name%>">
-            <p class="py-3"> <%=comments.comment%> </p>
-            <div class="absolute">
-                <a href="/comments/<%=comments.id%>/edit" class=" btn-float">Edit</a>
-
-                <!-- <a href="/comments/<%=comments.id%>/delete" class=" btn-float btn-float-delete">delete</a> -->
-                <form style="display:inline" action="/comments/<%= comments.id %>" method="POST">
-                    <input type="hidden" id="hidden" name="_method" value="DELETE">
-                    <input type="submit" value="Delete" id="Submit" class=" btn-float btn-float-delete">
-                </form>
-            </div>
-        </div>
+        <%if @client.comments%>
+            <%@client.comments.all.each do |comments|%>
+                <div class="testimonial bg-primary" style="display: flex; margin-bottom:10px; border-radius: 5px">
+                    <img src="#" alt="<%=comments.client.first_name%>" style="margin:20px">
+                    <p class="py-3" style="text-align:center; margin: 40px; padding:20px"> <%=comments.comment%> </p>
+                    <div class="absolute">
+                        <a href="/comments/<%=comments.id%>/edit" class=" btn-float">Edit</a>
+                        <!-- <a href="/comments/<%=comments.id%>/delete" class=" btn-float btn-float-delete">delete</a> -->
+                        <form style="display:inline" action="/comments/<%= comments.id %>" method="POST">
+                            <input type="hidden" id="hidden" name="_method" value="DELETE">
+                            <input type="submit" value="Delete" id="Submit" class=" btn-float btn-float-delete">
+                        </form>
+                    </div>
+                </div>
+            <%end%>
         <%end%>
-        <a href="/comments/new" class="btn btn-light"> Add New Comment</a>
+        <a href="/comments/new" class="btn btn-light"> Add Comment</a>
     </div>
 </section>
 
