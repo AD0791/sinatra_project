@@ -71,6 +71,35 @@ p {
   color: #333333;
 }
 
+.absolute {
+  position: absolute;
+  margin-top: 10px;
+  right: 50px;
+}
+.btn-float {
+  float: right;
+  padding: 0 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.btn-float:hover {
+  background: #33c6b6;
+  color: whitesmoke;
+}
+
+.btn-float-delete {
+  background: #333;
+  color: #dddddd;
+}
+
+.btn-float-delete:hover {
+  background-color: red;
+}
+
 .bg-dark {
   background: #333333;
   color: #ffffff;

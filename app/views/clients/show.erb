@@ -26,9 +26,14 @@
     <div class="info-content">
         <h2><span class="text-primary">Your </span> comment matters to us</h2>
         <%@client.comments.all.each do |comments|%>
-        <div class="testimonial bg-primary">
+        <div class="testimonial bg-primary" style="display: flex; margin-bottom:10px">
             <img src="#" alt="<%=comments.client.first_name%>">
-            <p><%=comments.comment%></p>
+            <p> <%=comments.comment%> </p>
+            <div class="absolute">
+                <a href="#" class=" btn-float">Edit</a>
+
+                <a href="#" class=" btn-float btn-float-delete">delete</a>
+            </div>
         </div>
         <%end%>
         <a href="/comments/new" class="btn btn-light"> Add New Comment</a>

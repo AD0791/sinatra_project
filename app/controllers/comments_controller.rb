@@ -23,5 +23,7 @@ class CommentsController < ApplicationController
         end
     end
 
+    # Edit situation
+
   
 end
