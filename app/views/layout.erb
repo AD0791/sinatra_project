@@ -51,10 +51,20 @@
 
 <!--
 -->
+
+<% if logged_in? %>
+  <div class="clr hidden"></div>
+<footer class="hidden">
+      <p class="hidden main-footer"> </p>
+</footer>
+<% else %>
+
 <div class="clr"></div>
 <footer id="main-footer">
       <p>Hotel HT &copy; 2019, ALL RIGHTS RESERVED </p>
 </footer>
+
+<% end %> 
 </body>
 
 </html>

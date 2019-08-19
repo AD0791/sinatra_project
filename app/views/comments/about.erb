@@ -1,0 +1,45 @@
+<section id="about-info" class="bg-light py-3">
+        <div class="container">
+            <div class="info-left">
+                <h1 class="l-heading"><span class="text-primary">About</span> Hotel</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam ipsum animi blanditiis voluptate
+                    saepe? Cupiditate quas optio laborum rem sit ab incidunt ratione veritatis, assumenda reprehenderit
+                    facilis dolore deleniti eum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam repudiandae suscipit voluptatibus modi
+                    temporibus cupiditate hic est, consequatur nam autem.</p>
+            </div>
+            <div class="info-right"><img src="/images/photo-2.jpg" alt="Photo"></div>
+        </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <section id="testimonials" class="py-3">
+        <div class="container">
+            <h2 class="l-heading">What Our Guests Say</h2>
+            <div class="testimonial bg-primary">
+                <img src="/images/person-1.jpg" alt="samantha">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit quibusdam similique repellat
+                    obcaecati veniam at minima recusandae, laudantium soluta, provident beatae. Soluta repellendus
+                    cumque quas exercitationem quos corporis fugit magnam rem odio necessitatibus ea quis rerum,
+                    officiis, harum atque?</p>
+            </div>
+            <div class="testimonial bg-primary">
+                <img src="/images/person-2.jpg" alt="satha">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit quibusdam similique repellat
+                    obcaecati veniam at minima recusandae, laudantium soluta, provident beatae. Soluta repellendus
+                    cumque quas exercitationem quos corporis fugit magnam rem odio necessitatibus ea quis rerum,
+                    officiis, harum atque?</p>
+            </div>
+            <%@comments.each do |comments|%>
+                <div class="testimonial bg-primary">
+                <img src="#" alt="<%=comments.client.first_name%>">
+                <p><%=comments.comment%></p>
+            </div>
+            <% end %>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>

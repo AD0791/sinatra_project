@@ -8,3 +8,41 @@
         </div>
     </div>
 </section>
+
+<section id="home-info" class="bg-dark">
+    <div class="info-content">
+        <h2><span class="text-primary">Your </span> Reservation</h2>
+        <div class="testimonial bg-primary">
+            <p>Date: <%=@client.reservations.first.date%></p>
+            <ol>
+                <li>Room: <%=@client.reservations.first.room%></li>
+                <li>Bed Size: <%=@client.reservations.first.bed_size%></li>
+                <li>Occupancy: <%=@client.reservations.first.occupancy%></li>
+                <li>Duration: <%=@client.reservations.first.number_of_day%></li>
+            </ol>
+        </div>
+        <a href="#" class="btn btn-light"> Add New Reservation</a>
+    </div>
+    <div class="info-content">
+        <h2><span class="text-primary">Your </span> comment matters to us</h2>
+        <%@client.comments.all.each do |comments|%>
+            <div class="testimonial bg-primary">
+                <img src="#" alt="<%=comments.client.first_name%>">
+                <p><%=comments.comment%></p>
+            </div>
+        <%end%>
+        <a href="/comments/new" class="btn btn-light"> Add New Comment</a>
+    </div>
+</section>
+
+<!--set the new, edit and delete button-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

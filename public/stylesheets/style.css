@@ -77,6 +77,11 @@ p {
     color: #ffffff;
 }
 
+.bg-blue {
+    background: blue;
+    color: #ffffff;
+}
+
 .bg-light {
     background: #f4f4f4;
     color: #333333;
@@ -152,7 +157,7 @@ p {
 /* showcase*/
 #showcase {
     background: url('/images/showcase.jpg') no-repeat center center/cover;
-    height: 600;
+    height: 600px;
 }
 
 #showcase .showcase-content {
@@ -173,7 +178,8 @@ p {
 
 /* Home info */
 #home-info {
-    height: 400px
+    height: 400px;
+
 }
 
 #home-info .info-img {
@@ -227,13 +233,6 @@ p {
 
 
 
-/* main footer */
-#main-footer {
-    text-align: center;
-    background: #444444;
-    color: #ffffff;
-    padding: 20px;
-}
 
 #testimonials {
     height: 600px;
@@ -259,6 +258,10 @@ p {
     float: left;
     margin-right: 20px;
     border-radius: 50%;
+}
+
+.testimonial ol li {
+    list-style: none;
 }
 
 /* form */
@@ -383,4 +386,17 @@ flash {
 
 .sm-footer a:hover {
     background: #f7c08a;
+}
+
+/* main footer */
+#main-footer {
+    text-align: center;
+    background: #444444;
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+.hidden {
+    display: none;
 }

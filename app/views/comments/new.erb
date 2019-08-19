@@ -1,0 +1,32 @@
+<section id="contact-form" class="py-3">
+        <div class="container">
+            <h1 class="l-heading"><span class='text-primary'>About</span> Us</h1>
+            <p>Please tell us what you think</p>
+            <form action="/comments" method="POST">
+                <fieldset class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment"></textarea>
+                </fieldset>
+                <!--Flash message-->
+                <% if flash.has?(:message) %>
+                    <p class="flash"><%= flash[:message] %></p>
+                <% end %>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>

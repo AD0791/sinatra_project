@@ -5,7 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride
-use CommentsController
 use ReservationsController
+use CommentsController
 use ClientsController
 run ApplicationController

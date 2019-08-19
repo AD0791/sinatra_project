@@ -1,4 +1,8 @@
 class ClientsController < ApplicationController
+    # the show page
+    
+    
+    
     # Entry point = SignUP
     get '/clients/signup' do
         if !logged_in?
@@ -62,9 +66,10 @@ class ClientsController < ApplicationController
         redirect '/' 
     end
 
-    # the show page
     get '/clients/:slug' do
+        #binding.pry
         @client = current_user
+        #binding.pry
         #redirect_if_not_logged_in
         if !logged_in?
             redirect '/'

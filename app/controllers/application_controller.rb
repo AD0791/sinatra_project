@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-     set :session_secret, "hotel_security"
+    set :session_secret, "hotel_security"
     use Rack::Flash
   end
 
@@ -17,6 +17,13 @@ class ApplicationController < Sinatra::Base
     #binding.pry
     erb :index
   end
+
+   # independant read of all the comments
+    get '/comments/about' do
+        @comments = Comment.all
+        #binding.pry
+        erb :'comments/about'
+    end  
 
 
   # helper method
@@ -31,3 +38,14 @@ class ApplicationController < Sinatra::Base
   end
 
 end
+
+#redirect_if_not_logged_in
+#if !logged_in?
+# redirect '/'
+#end 
+
+#def redirect_to_current_user
+#      if @run.user_id != current_user.id
+#        redirect "/users/#{current_user.slug}"
+#      end
+#    end
