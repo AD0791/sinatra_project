@@ -76,6 +76,7 @@ p {
   margin-top: 10px;
   right: 50px;
 }
+
 .btn-float {
   float: right;
   padding: 0 10px;
@@ -100,6 +101,31 @@ p {
   background-color: red;
 }
 
+.btn-fright {
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  color: black;
+  border-radius: 5px;
+}
+
+.btn-fright-edit:hover {
+  background: #33c6b6;
+  color: whitesmoke;
+}
+
+.btn-fright-delete {
+  background: #333;
+  color: #dddddd;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.btn-fright-delete:hover {
+  background-color: red;
+}
 .bg-dark {
   background: #333333;
   color: #ffffff;
