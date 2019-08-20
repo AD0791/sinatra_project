@@ -452,10 +452,6 @@ flash {
   background: #444444;
   color: #ffffff;
   padding: 20px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 .hidden {
