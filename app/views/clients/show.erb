@@ -26,9 +26,9 @@
                         <li>Duration: <%=reservation.number_of_day%></li>
                     </ol>
                 <div style="position:absolute; left:500px; margin-top:10px">
-                    <a href="#" class=" btn-fright btn-fright-edit">Edit</a>
+                    <a href="/reservations/<%=reservation.id%>/edit" class=" btn-fright btn-fright-edit">Edit</a>
                     <!-- <a href="#" class=" btn-float btn-float-delete">delete</a> -->
-                    <form style="display:inline" action="#" method="POST">
+                    <form style="display:inline" action="/reservations/<%= reservation.id %>" method="POST">
                         <input type="hidden" id="hidden" name="_method" value="DELETE">
                         <input type="submit" value="Delete" id="Submit" class="btn-fright-delete ">
                     </form>

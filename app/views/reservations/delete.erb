@@ -1,0 +1,8 @@
+<h1> Are you sure, You want to delete your reservation?</h1>
+
+<p> <%=@reservation.room%> </p>
+
+<form action="/comments/<%= @reservation.id %>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete" id="Submit">
+</form>

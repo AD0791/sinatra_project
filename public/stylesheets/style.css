@@ -126,6 +126,7 @@ p {
 .btn-fright-delete:hover {
   background-color: red;
 }
+
 .bg-dark {
   background: #333333;
   color: #ffffff;
@@ -322,11 +323,9 @@ p {
 
 /* form */
 
-#contact-form {
-}
+#contact-form {}
 
-#contact-form .container {
-}
+#contact-form .container {}
 
 #contact-form .container .form-group {
   border: none;
@@ -448,10 +447,15 @@ flash {
 
 /* main footer */
 #main-footer {
+  clear: both;
   text-align: center;
   background: #444444;
   color: #ffffff;
   padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .hidden {
